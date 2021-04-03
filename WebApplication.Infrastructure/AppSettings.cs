@@ -28,23 +28,6 @@ namespace WebApplication.Infrastructure
         public static readonly string RECORD_NOT_AVAILABLE = Errors.RECORD_NOT_AVAILABLE;
         #endregion
 
-        #region Security
-        public const string BLOCKED_IPS_KEY = "blockedips";
-        public const string BLOCKED_IPS_FILE = "~/App_Data";
-        public const int PASS_SALT_SIZE = 24;
-        public const int BLOWFISH_KEY_BYTES_SIZE = 72;
-
-        #region SysAdmin
-        public const string ADMIN_USER_TOKEN = "3826e8cab8b78";
-        public const string ADMIN_USER_SALT = "a47da919h78ca";
-        public const string ADMIN_PASS_TOKEN = "35fb9337f4b95";
-        public const string ADMIN_PASS_SALT = "60ac08a6$feb1";
-        #endregion
-
-        public static readonly string DeviceUserName = ConfigurationManager.AppSettings["DeviceUserName"];
-
-        #endregion
-
         #region Paging
         public static readonly int DEFAULT_PAGE_SIZE = int.Parse(ConfigurationManager
             .AppSettings["DEFAULT_PAGE_SIZE"]);
