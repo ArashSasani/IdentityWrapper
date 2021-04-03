@@ -139,7 +139,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("367f75d6-d126-4130-8903-fb99147ae7dc"),
-                    Title = "لیست محدودیت های زمانی",
+                    Title = "List",
                     Path = "GET api/cms/restricted/access/times",
                     Priority = 0
                 },
@@ -147,7 +147,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("367f75d6-d126-4130-8903-fb99147ae7dc"),
-                    Title = "جزییات اطلاعات محدودیت زمانی",
+                    Title = "Details",
                     Path = "GET api/cms/restricted/access/times/{id}",
                     Priority = 1
                 },
@@ -155,7 +155,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("367f75d6-d126-4130-8903-fb99147ae7dc"),
-                    Title = "ثبت اطلاعات محدودیت زمانی",
+                    Title = "Create",
                     Path = "POST api/cms/restricted/access/times/create",
                     Priority = 2
                 },
@@ -163,7 +163,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("367f75d6-d126-4130-8903-fb99147ae7dc"),
-                    Title = "ویرایش اطلاعات محدودیت زمانی",
+                    Title = "Update",
                     Path = "PUT api/cms/restricted/access/times/update",
                     Priority = 3
                 },
@@ -171,15 +171,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("367f75d6-d126-4130-8903-fb99147ae7dc"),
-                    Title = "حذف موقت اطلاعات محدودیت زمانی",
-                    Path = "DELETE api/cms/restricted/access/times/soft/{id}",
-                    Priority = 4
-                },
-                new AccessPath
-                {
-                    Id = Guid.NewGuid(),
-                    ParentId = Guid.Parse("367f75d6-d126-4130-8903-fb99147ae7dc"),
-                    Title = "حذف دایم اطلاعات محدودیت زمانی",
+                    Title = "Delete",
                     Path = "DELETE api/cms/restricted/access/times/permanent/{id}",
                     Priority = 5
                 },
@@ -187,7 +179,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("367f75d6-d126-4130-8903-fb99147ae7dc"),
-                    Title = "حذف انتخابی محدودیت های زمانی",
+                    Title = "Delete items",
                     Path = "DELETE api/cms/restricted/access/times",
                     Priority = 6
                 }
@@ -198,7 +190,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("0df91819-eb69-420c-ae9a-463b6d1a0692"),
-                    Title = "لیست آی پی ها",
+                    Title = "List",
                     Path = "GET api/cms/restricted/ips",
                     Priority = 0
                 },
@@ -206,7 +198,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("0df91819-eb69-420c-ae9a-463b6d1a0692"),
-                    Title = "جزییات اطلاعات آی پی",
+                    Title = "Details",
                     Path = "GET api/cms/restricted/ips/{id}",
                     Priority = 1
                 },
@@ -214,7 +206,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("0df91819-eb69-420c-ae9a-463b6d1a0692"),
-                    Title = "ثبت اطلاعات آی پی",
+                    Title = "Create",
                     Path = "POST api/cms/restricted/ips/create",
                     Priority = 2
                 },
@@ -222,7 +214,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("0df91819-eb69-420c-ae9a-463b6d1a0692"),
-                    Title = "ویرایش اطلاعات آی پی",
+                    Title = "Update",
                     Path = "PUT api/cms/restricted/ips/update",
                     Priority = 3
                 },
@@ -230,15 +222,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("0df91819-eb69-420c-ae9a-463b6d1a0692"),
-                    Title = "حذف موقت اطلاعات آی پی",
-                    Path = "DELETE api/cms/restricted/ips/soft/{id}",
-                    Priority = 4
-                },
-                new AccessPath
-                {
-                    Id = Guid.NewGuid(),
-                    ParentId = Guid.Parse("0df91819-eb69-420c-ae9a-463b6d1a0692"),
-                    Title = "حذف دایم اطلاعات آی پی",
+                    Title = "Delete",
                     Path = "DELETE api/cms/restricted/ips/permanent/{id}",
                     Priority = 5
                 },
@@ -246,7 +230,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("0df91819-eb69-420c-ae9a-463b6d1a0692"),
-                    Title = "حذف انتخابی آی پی ها",
+                    Title = "Delete items",
                     Path = "DELETE api/cms/restricted/ips",
                     Priority = 6
                 }
@@ -257,7 +241,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("b9e05fac-2879-4edb-92c4-02b53e1ae805"),
-                    Title = "جزییات دسترسی های نقش مورد نظر",
+                    Title = "Details",
                     Path = "GET api/cms/role/access/paths/{id}",
                     Priority = 0
                 },
@@ -265,7 +249,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("b9e05fac-2879-4edb-92c4-02b53e1ae805"),
-                    Title = "تغییر دسترسی های نقش مورد نظر",
+                    Title = "Update",
                     Path = "PUT api/cms/role/access/paths/update",
                     Priority = 1
                 }
@@ -276,7 +260,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("58e90c18-2c83-4194-89f8-97b9ea3026c3"),
-                    Title = "لیست نقش های کاربر سامانه",
+                    Title = "List",
                     Path = "GET api/cms/roles",
                     Priority = 0
                 },
@@ -284,7 +268,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("58e90c18-2c83-4194-89f8-97b9ea3026c3"),
-                    Title = "جزییات اطلاعات نقش کاربر سامانه",
+                    Title = "Details",
                     Path = "GET api/cms/roles/{id}",
                     Priority = 1
                 },
@@ -292,7 +276,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("58e90c18-2c83-4194-89f8-97b9ea3026c3"),
-                    Title = "ثبت نقش کاربر سامانه",
+                    Title = "Create",
                     Path = "POST api/cms/roles/create",
                     Priority = 2
                 },
@@ -300,7 +284,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("58e90c18-2c83-4194-89f8-97b9ea3026c3"),
-                    Title = "ویرایش اطلاعات نقش کاربر سامانه",
+                    Title = "Update",
                     Path = "PUT api/cms/roles/update",
                     Priority = 3
                 },
@@ -308,7 +292,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("58e90c18-2c83-4194-89f8-97b9ea3026c3"),
-                    Title = "حذف نقش کاربر سامانه",
+                    Title = "Delete",
                     Path = "DELETE api/cms/roles/{id}",
                     Priority = 4
                 }
@@ -319,7 +303,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId=Guid.Parse("2e98edf9-6c14-442b-a788-320dbf7ecdf5"),
-                    Title = "جزییات اطلاعات شخصی کاربر سامانه",
+                    Title = "Details",
                     Path = "GET api/cms/user/info/{id}",
                     Priority = 0
                 },
@@ -327,7 +311,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId=Guid.Parse("2e98edf9-6c14-442b-a788-320dbf7ecdf5"),
-                    Title = "ویرایش اطلاعات شخصی کاربر سامانه",
+                    Title = "Update",
                     Path = "PUT api/cms/user/info/update",
                     Priority = 1
                 }
@@ -338,7 +322,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("01705ce9-f696-4390-b092-870240b9a0fc"),
-                    Title = "اطلاعات نقش های کاربر مورد نظر",
+                    Title = "List",
                     Path = "GET api/cms/user/in/roles/{userId}",
                     Priority = 0
                 },
@@ -346,7 +330,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("01705ce9-f696-4390-b092-870240b9a0fc"),
-                    Title = "جزییات اطلاعات نقش کاربر مورد نظر",
+                    Title = "Details",
                     Path = "GET api/cms/user/in/roles/{userId}/{roleId}",
                     Priority = 1
                 },
@@ -354,7 +338,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("01705ce9-f696-4390-b092-870240b9a0fc"),
-                    Title = "ثبت نقش برای کاربر",
+                    Title = "Create",
                     Path = "POST api/cms/user/in/roles/create",
                     Priority = 2
                 },
@@ -362,7 +346,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("01705ce9-f696-4390-b092-870240b9a0fc"),
-                    Title = "حذف نقش از کاربر",
+                    Title = "Delete",
                     Path = "DELETE api/cms/user/in/roles/{userId}/{roleId}",
                     Priority = 3
                 }
@@ -373,7 +357,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId=Guid.Parse("c9bffb79-9fe1-4884-9904-4fe24520933a"),
-                    Title = "لیست تراکنش ها",
+                    Title = "List",
                     Path = "GET api/cms/user/logs/{userId}",
                     Priority = 0
                 },
@@ -381,7 +365,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId=Guid.Parse("c9bffb79-9fe1-4884-9904-4fe24520933a"),
-                    Title = "جزییات اطلاعات تراکنش",
+                    Title = "Details",
                     Path = "GET api/cms/user/logs/{id}",
                     Priority = 1
                 }
@@ -392,7 +376,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("e549df38-c585-479e-8ea8-81a3a11adb24"),
-                    Title = "لیست کاربران سامانه",
+                    Title = "List",
                     Path = "GET api/cms/users",
                     Priority = 0
                 },
@@ -400,7 +384,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("e549df38-c585-479e-8ea8-81a3a11adb24"),
-                    Title = "جزییات اطلاعات کاربر سامانه",
+                    Title = "Details",
                     Path = "GET api/cms/users/{id}",
                     Priority = 1
                 },
@@ -408,7 +392,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("e549df38-c585-479e-8ea8-81a3a11adb24"),
-                    Title = "ثبت کاربر سامانه",
+                    Title = "Create",
                     Path = "POST api/cms/users/create",
                     Priority = 2
                 },
@@ -416,7 +400,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("e549df38-c585-479e-8ea8-81a3a11adb24"),
-                    Title = "ویرایش اطلاعات کاربر سامانه",
+                    Title = "Update",
                     Path = "PUT api/cms/users/update",
                     Priority = 3
                 },
@@ -424,7 +408,7 @@ namespace CMS.Data.Identity
                 {
                     Id = Guid.NewGuid(),
                     ParentId = Guid.Parse("e549df38-c585-479e-8ea8-81a3a11adb24"),
-                    Title = "حذف کاربر سامانه",
+                    Title = "Delete",
                     Path = "DELETE api/cms/users/{id}",
                     Priority = 4
                 }
