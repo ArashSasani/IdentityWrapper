@@ -195,7 +195,7 @@ namespace CMS.Service
             }
             else
             {
-                return IdentityResult.Failed("نقش مورد نظر قبلا به ثبت رسیده است.");
+                return IdentityResult.Failed("The role is already registered for the user");
             }
         }
 
