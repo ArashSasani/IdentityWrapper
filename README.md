@@ -30,7 +30,7 @@ In your web app you can use the default **Authorize attribute** for your control
 your own logic for role-based, claim-based, etc authorization.
 
 ## Extra info
-In this sample I used role-based authorization with [OAuth](https://oauth.net/) opaque token authentication, I just initialized different paths or routes for the app as the 
+for this sample I used role-based authorization with [OAuth](https://oauth.net/) opaque token in my web api app, I just initialized different paths or routes for the app as the 
 access paths, Then each user can have access either to some or all of them,
-then based on the authorized access path the user can either get in the route or get 401 unauthorize for each route.
+then based on the authorized access path the user can either get in the route or get 401 unauthorize for the route.
 You can also use jwt or any other 3rd party token based authentication and authorizan system.
