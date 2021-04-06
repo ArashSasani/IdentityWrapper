@@ -2,6 +2,7 @@
 * [Info](#info)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Extra info](#extra-info)
 
 ## Info
 This project is a sample for wrapping all the logic for ASP.NET Identity in a couple of different DDLs and moving it out of the ASP.NET MVC or Web API app, you just need to call 
@@ -27,3 +28,9 @@ To use this project, **reference all its DDLs** in your project and just call se
 Most methods are in the **[AuthService](https://github.com/ArashSasani/IdentityWrapper/blob/master/CMS.Service/Services/AuthService.cs)** which you can use for authentication and authorization in your web app.
 In your web app you can use the default **Authorize attribute** for your controllers and actions which will bind automatically to **ASP.NET Identity Authentication and authorization** or implement 
 your own logic for role-based, claim-based, etc authorization.
+
+## Extra info
+In this sample I used role-based authorization with [OAuth](https://oauth.net/) opaque token authentication, I just initialized different paths or routes for the app as the 
+access paths, Then each user can have access either to some or all of them,
+then based on the authorized access path the user can either get in the route or get 401 unauthorize for each route.
+You can also use jwt or any other 3rd party token based authentication and authorizan system.
