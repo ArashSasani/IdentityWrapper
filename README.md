@@ -24,6 +24,6 @@ Main packages used in the project:
 
 ## Setup
 To use this project, **reference all its DDLs** in your project and just call services in the service layer according to your needs, **build and restore the packages** and you should be good to go.
-Most methods are in the **AuthService** which you can use for authentication and authorization in your web app.
-In your web app you can the default **Authorize attribute** for your controllers and actions which will bind automatically to **ASP.NET Identity Authentication and authorization** or implement 
+Most methods are in the **[AuthService](https://github.com/ArashSasani/IdentityWrapper/blob/master/CMS.Service/Services/AuthService.cs)** which you can use for authentication and authorization in your web app.
+In your web app you can use the default **Authorize attribute** for your controllers and actions which will bind automatically to **ASP.NET Identity Authentication and authorization** or implement 
 your own logic for role-based, claim-based, etc authorization.
