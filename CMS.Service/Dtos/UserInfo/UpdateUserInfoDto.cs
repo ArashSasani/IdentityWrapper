@@ -8,7 +8,7 @@ namespace CMS.Service.Dtos.UserInfo
 {
     public class UpdateUserInfoDto
     {
-        [Required(ErrorMessage = "لطفا کد کاربر را وارد کنید")]
+        [Required(ErrorMessage = "*")]
         public string UserId { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }

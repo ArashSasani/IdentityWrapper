@@ -6,7 +6,7 @@ namespace CMS.Service.Dtos.RestrictedAccessTime
 {
     public class UpdateRestrictedAccessTimeDto
     {
-        [Range(1, int.MaxValue, ErrorMessage = "عدد وارد شده باید بین {1} و {2} باشد")]
+        [Range(1, int.MaxValue, ErrorMessage = "number should be between {1} and {2}")]
         public int Id { get; set; }
         public string Date { get; set; }
         [DataType(DataType.Time)]
@@ -20,7 +20,7 @@ namespace CMS.Service.Dtos.RestrictedAccessTime
         public UpdateRestrictedAccessTimeDtoValidator()
         {
             RuleFor(x => x.ToTime).GreaterThan(x => x.FromTime)
-                .WithMessage("زمان پایان نباید از زمان شروع کمتر و یا مساوی آن باشد");
+                .WithMessage("end time cannot be less or equal than from time");
         }
     }
 }

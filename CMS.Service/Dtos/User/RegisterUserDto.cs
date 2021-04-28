@@ -5,17 +5,16 @@ namespace CMS.Service.Dtos.User
     public class RegisterUserDto
     {
         public string UserId { get; set; }
-        [Required(ErrorMessage = "لطفا نام کاربری را وارد کنید")]
+        [Required(ErrorMessage = "*")]
         public string UserName { get; set; }
 
-        [Required(ErrorMessage = "لطفا کلمه عبور را وارد کنید")]
-        [StringLength(100, ErrorMessage = "{0} باید حداقل {2} کاراکتر باشد.", MinimumLength = 6)]
+        [Required(ErrorMessage = "*")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
-        [Required(ErrorMessage = "لطفا تکرار کلمه عبور را وارد کنید")]
+        [Required(ErrorMessage = "*")]
         [DataType(DataType.Password)]
-        [Compare("Password", ErrorMessage = "کلمه عبور و تکرار کلمه عبور متفاوت می باشند.")]
+        [Compare("Password", ErrorMessage = "confirm pass does not match with the pass")]
         public string ConfirmPassword { get; set; }
         public bool IsPersonnel { get; set; }
 

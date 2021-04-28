@@ -18,7 +18,7 @@ namespace CMS.Service.Dtos.RestrictedAccessTime
         public CreateRestrictedAccessTimeDtoValidator()
         {
             RuleFor(x => x.ToTime).GreaterThan(x => x.FromTime)
-                .WithMessage("زمان پایان نباید از زمان شروع کمتر و یا مساوی آن باشد");
+                .WithMessage("end time cannot be less or equal than from time");
         }
     }
 }

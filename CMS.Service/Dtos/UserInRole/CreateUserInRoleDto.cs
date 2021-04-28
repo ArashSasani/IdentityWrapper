@@ -4,9 +4,9 @@ namespace CMS.Service.Dtos.UserInRole
 {
     public class CreateUserInRoleDto
     {
-        [Required(ErrorMessage = "لطفا کد کاربر را وارد کنید")]
+        [Required(ErrorMessage = "*")]
         public string UserId { get; set; }
-        [Required(ErrorMessage = "لطفا کد نقش را وارد کنید")]
+        [Required(ErrorMessage = "*")]
         public string RoleId { get; set; }
     }
 }

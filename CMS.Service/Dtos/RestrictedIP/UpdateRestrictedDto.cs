@@ -4,10 +4,10 @@ namespace CMS.Service.Dtos.RestrictedIP
 {
     public class UpdateRestrictedDto
     {
-        [Range(1, int.MaxValue, ErrorMessage = "عدد وارد شده باید بین {1} و {2} باشد")]
+        [Range(1, int.MaxValue, ErrorMessage = "number should be between {1} and {2}")]
         public int Id { get; set; }
-        [Required(ErrorMessage = "لطفا آی پی را وارد کنید")]
-        [RegularExpression(@"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$", ErrorMessage = "آی پی اشتباه وارد شده است")]
+        [Required(ErrorMessage = "*")]
+        [RegularExpression(@"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$", ErrorMessage = "IP is incorrect")]
         public string IP { get; set; }
     }
 }

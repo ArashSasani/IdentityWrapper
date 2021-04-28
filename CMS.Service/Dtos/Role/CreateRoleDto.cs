@@ -4,7 +4,7 @@ namespace CMS.Service.Dtos.Role
 {
     public class CreateRoleDto
     {
-        [Required(ErrorMessage ="لطفا نام نقش را وارد کنید")]
+        [Required(ErrorMessage ="*")]
         public string Name { get; set; }
     }
 }
