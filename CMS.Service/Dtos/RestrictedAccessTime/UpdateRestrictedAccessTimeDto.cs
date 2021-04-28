@@ -8,7 +8,7 @@ namespace CMS.Service.Dtos.RestrictedAccessTime
     {
         [Range(1, int.MaxValue, ErrorMessage = "number should be between {1} and {2}")]
         public int Id { get; set; }
-        public string Date { get; set; }
+        public DateTime? Date { get; set; }
         [DataType(DataType.Time)]
         public TimeSpan FromTime { get; set; }
         [DataType(DataType.Time)]

@@ -8,7 +8,6 @@ using CMS.Service.Dtos.User;
 using CMS.Service.Dtos.UserInfo;
 using CMS.Service.Dtos.UserInRole;
 using CMS.Service.Interfaces;
-using DateConverter;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -415,7 +414,7 @@ namespace CMS.Service
                 LastName = user.LastName,
                 NationalCode = user.NationalCode,
                 BirthDate = user.BirthDate.HasValue
-                    ? user.BirthDate.Value.GregorianToPersian(Converter.IncludeTime.No) : "",
+                    ? user.BirthDate.Value.ToShortDateString() : "",
                 Image = (user.Image != null && user.Image.Length > 0)
                     ? _imageService.EncodeToBase64(user.Image)
                     : WebApplication.Infrastructure.AppSettings.DEFAULT_USER_IMAGE_DATA,
@@ -438,7 +437,7 @@ namespace CMS.Service
                 LastName = user.LastName,
                 NationalCode = user.NationalCode,
                 BirthDate = user.BirthDate.HasValue
-                    ? user.BirthDate.Value.GregorianToPersian(Converter.IncludeTime.No) : "",
+                    ? user.BirthDate.Value.ToShortDateString() : "",
                 Image = (user.Image != null && user.Image.Length > 0)
                     ? _imageService.EncodeToBase64(user.Image)
                     : WebApplication.Infrastructure.AppSettings.DEFAULT_USER_IMAGE_DATA,
@@ -455,8 +454,7 @@ namespace CMS.Service
                 user.Name = userInfoDto.Name;
                 user.LastName = userInfoDto.LastName;
                 user.NationalCode = userInfoDto.NationalCode;
-                user.BirthDate = !string.IsNullOrEmpty(userInfoDto.BirthDate)
-                    ? (DateTime?)userInfoDto.BirthDate.PersianToGregorian(Converter.IncludeTime.No) : null;
+                user.BirthDate = userInfoDto.BirthDate;
                 user.Image = userInfoDto.ImageBytes;
                 user.Details = userInfoDto.Details;
                 user.Image = (userInfoDto.Image != null && userInfoDto.Image.Length > 0)

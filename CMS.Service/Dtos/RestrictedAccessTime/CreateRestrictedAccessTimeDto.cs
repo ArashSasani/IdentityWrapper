@@ -6,7 +6,7 @@ namespace CMS.Service.Dtos.RestrictedAccessTime
 {
     public class CreateRestrictedAccessTimeDto
     {
-        public string Date { get; set; }
+        public DateTime? Date { get; set; }
         [DataType(DataType.Time)]
         public TimeSpan FromTime { get; set; }
         [DataType(DataType.Time)]

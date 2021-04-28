@@ -3,7 +3,6 @@ using CMS.Core.Model;
 using CMS.Service.Dtos.RestrictedAccessTime;
 using CMS.Service.Dtos.RestrictedIP;
 using CMS.Service.Dtos.UserLog;
-using DateConverter;
 
 namespace CMS.Service.Infrastructure
 {
@@ -16,7 +15,7 @@ namespace CMS.Service.Infrastructure
                 .ForMember(dest => dest.UserName
                     , opt => opt.MapFrom(src => src.User.UserName))
                 .ForMember(dest => dest.Date
-                    , opt => opt.MapFrom(src => src.Date.GregorianToPersian(Converter.IncludeTime.No)));
+                    , opt => opt.MapFrom(src => src.Date.ToShortDateString()));
 
             #endregion
 
@@ -28,7 +27,7 @@ namespace CMS.Service.Infrastructure
             CreateMap<RestrictedAccessTime, RestrictedAccessTimeDto>()
                 .ForMember(dest => dest.Date,
                     opt => opt.MapFrom(src => src.Date.HasValue
-                        ? src.Date.Value.GregorianToPersian(Converter.IncludeTime.No) : "No Restriction"))
+                        ? src.Date.Value.ToShortDateString() : "No Restriction"))
                 .ForMember(dest => dest.FromTime,
                     opt => opt.MapFrom(src => src.FromTime.ToString("hh\\:mm\\:ss")))
                 .ForMember(dest => dest.ToTime,

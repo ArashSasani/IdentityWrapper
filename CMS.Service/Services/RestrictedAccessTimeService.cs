@@ -3,7 +3,6 @@ using CMS.Core.Interfaces;
 using CMS.Core.Model;
 using CMS.Service.Dtos.RestrictedAccessTime;
 using CMS.Service.Interfaces;
-using DateConverter;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -92,8 +91,7 @@ namespace CMS.Service
         {
             var restrictedAccessTime = new RestrictedAccessTime
             {
-                Date = !string.IsNullOrEmpty(dto.Date) 
-                    ? (DateTime?)dto.Date.PersianToGregorian(Converter.IncludeTime.No) : null,
+                Date = dto.Date,
                 FromTime = dto.FromTime,
                 ToTime = dto.ToTime
             };
@@ -106,8 +104,7 @@ namespace CMS.Service
             var restrictedAccessTime = _restrictedAccessTimeRepository.GetById(dto.Id);
             if (restrictedAccessTime != null)
             {
-                restrictedAccessTime.Date = !string.IsNullOrEmpty(dto.Date)
-                    ? (DateTime?)dto.Date.PersianToGregorian(Converter.IncludeTime.No) : null;
+                restrictedAccessTime.Date = dto.Date;
                 restrictedAccessTime.FromTime = dto.FromTime;
                 restrictedAccessTime.ToTime = dto.ToTime;
 
